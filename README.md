@@ -1,2 +1,3 @@
 # react-json-to-survey
-Easy way to build a survey from a json schema
+Easy way to build a survey from a json schema.
+Reactjs dependency
