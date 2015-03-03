@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script src="react.js"></script>
+  <script src="JSXTransformer.js"></script>
+  <script src='build/app.js'></script>
+  <script> 
+    var submit = function(values) {
+      console.log('sending values', values);
+    }
+    var data = {
+      'schema': 
+      [
+        {
+          'type': 'text',
+          'label': '1. camp',
+          'skip': {
+            'cond': '<>',
+            'val': '',
+            'to': [1]
+          }
+        },
+        {
+          'type': 'text',
+          'label': '2. camp2'
+        },
+        {
+          'type': 'textarea',
+          'label': '3. camp5'
+        },
+        {
+          'type': 'radio',
+          'label': '4. camp3',
+          'data': [
+            {'value': '1', 'label': 'text1'},
+            {'value': '2', 'label': 'text2'},
+            {'value': '3', 'label': 'text3'}
+          ]
+        },
+        {
+          'type': 'checkbox',
+          'label': '5. camp8',
+          'data': [
+            {'value': '1', 'label': 'text5'},
+            {'value': '2', 'label': 'text6'},
+            {'value': '3', 'label': 'text7'}
+          ],
+          'skip': {
+            'cond': '<>',
+            'val': '0',
+            'to': [0]
+          }
+        },
+        {
+          'type': 'radio',
+          'label': '6. camp10',
+          'data': [
+            {'label': 'text5'},
+            {'label': 'text6'},
+            {'label': 'text7'}
+          ]
+        }
+      ],
+      'title': 'form',
+      'submitButton': {
+        'text': 'Send'
+      },
+      'onSubmit': submit
+    }
+    //checkbox compare length
+    React.renderComponent( 
+      FormView({data: data}), document.getElementById('app')
+    );
+  </script>
+</body>
+</html>
