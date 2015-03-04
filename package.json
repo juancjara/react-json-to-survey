@@ -1,0 +1,31 @@
+{
+  "name": "react-json-to-survey",
+  "version": "1.0.0",
+  "description": "json to survey using react",
+  "main": " none.js",
+  "scripts": {
+    "start": "jsx -w src/ build/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist": "gulp dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juancjara/react-json-to-survey.git"
+  },
+  "kyewords": [
+    "react",
+    "json",
+    "survey"
+  ],
+  "author": "jcj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juancjara/react-json-to-survey/issues"
+  },
+  "homepage": "https://github.com/juancjara/react-json-to-survey",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-uglify": "^1.1.0"
+  }
+}
