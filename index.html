@@ -11,14 +11,14 @@
   <script src='https://cdn.rawgit.com/juancjara/react-json-to-survey/master/dist/reactToJson.js'></script>
   <script> 
     var submit = function(values) {
-      console.log('sending values', values);
+      console.log('field values array ', values);
     }
     var data = {
       'schema': 
       [
         {
           'type': 'text',
-          'label': '1. camp',
+          'label': '1. question',
           'skip': {
             'cond': '<>',
             'val': '',
@@ -27,15 +27,15 @@
         },
         {
           'type': 'text',
-          'label': '2. camp2'
+          'label': '2. Second question'
         },
         {
           'type': 'textarea',
-          'label': '3. camp5'
+          'label': '3. Another question'
         },
         {
           'type': 'radio',
-          'label': '4. camp3',
+          'label': '4. another?',
           'data': [
             {'value': '1', 'label': 'text1'},
             {'value': '2', 'label': 'text2'},
@@ -44,7 +44,7 @@
         },
         {
           'type': 'checkbox',
-          'label': '5. camp8',
+          'label': '5. You almost finish',
           'data': [
             {'value': '1', 'label': 'text5'},
             {'value': '2', 'label': 'text6'},
@@ -58,7 +58,7 @@
         },
         {
           'type': 'radio',
-          'label': '6. camp10',
+          'label': '6. This is the last one',
           'data': [
             {'label': 'text5'},
             {'label': 'text6'},
@@ -72,7 +72,7 @@
       },
       'onSubmit': submit
     }
-    //checkbox compare length
+    
     React.renderComponent( 
       FormView({data: data}), document.getElementById('app')
     );
